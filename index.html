@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajat Gupta</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --border: #e5e5e5;
+    --serif: 'Newsreader', Georgia, serif;
+    --sans: 'Inter', -apple-system, system-ui, sans-serif;
+  }
+
+  html[data-theme="dark"] {
+    --bg: #111111;
+    --text: #e5e5e5;
+    --muted: #999999;
+    --border: #2a2a2a;
+  }
+
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 2rem;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  a {
+    color: var(--text);
+    text-decoration-color: var(--muted);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s;
+  }
+  a:hover {
+    text-decoration-color: var(--text);
+  }
+
+  /* ── Nav ── */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4.5rem;
+  }
+  .nav-name {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .nav-right a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-right a:hover { color: var(--text); }
+  .nav-right .sep { margin: 0 0.25rem; }
+  .theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 1rem;
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+  }
+  .theme-btn:hover { color: var(--text); }
+
+  /* ── Intro ── */
+  .intro {
+    margin-bottom: 4rem;
+  }
+  .intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+  .intro em {
+    font-family: var(--serif);
+    font-style: italic;
+  }
+
+  /* ── Section ── */
+  .section-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Work Experience ── */
+  .work-section {
+    margin-bottom: 4rem;
+  }
+  .work-item {
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-left: 1rem;
+    border-left: 1.5px solid var(--border);
+  }
+  .work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .work-company {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .work-date {
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .work-role {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+    font-style: italic;
+    font-family: var(--serif);
+  }
+  .work-item ul {
+    list-style: none;
+  }
+  .work-item li {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 0.4rem;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  .work-item li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+  }
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.82rem;
+  }
+  .footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--text); }
+  .footer-rss {
+    font-size: 0.82rem;
+  }
+  .footer-rss a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-rss a:hover { color: var(--text); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.78rem;
+    color: var(--muted);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    html { font-size: 16px; }
+    body { padding: 2rem 1.25rem 1.5rem; }
+    nav { margin-bottom: 3rem; }
+    .work-header { flex-direction: column; gap: 0.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-name">Rajat Gupta</a>
+  <div class="nav-right">
+    <a href="#experience">about</a>
+    <span class="sep">/</span>
+    <a href="https://guptarajat.hashnode.dev/" target="_blank" rel="noopener">writing</a>
+    <span style="margin-left:0.25rem;color:var(--muted);">·</span>
+    <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<section class="intro">
+  <p>
+    I am a frontend engineer (<em>noun:</em> an engineer who combines product thinking, user understanding, and software engineering to design and build useful, scalable digital products) with a keen eye for design, web UX, scalable applications, and web performance.
+  </p>
+  <p>
+    Apart from work, I enjoy trying new apps, building side projects, traveling, working out, and experimenting with food.
+  </p>
+  <p>
+    You can explore my work on <a href="https://github.com/rajatetc" target="_blank" rel="noopener">GitHub</a>, connect with me on <a href="https://linkedin.com/in/rajatetc" target="_blank" rel="noopener">LinkedIn</a>, or email me at <a href="mailto:rajatgupta1798@gmail.com">rajatgupta1798@gmail.com</a> if you'd like to talk about roles, products, or building thoughtful experiences on the web.
+  </p>
+  <p>
+    Prefer a quick chat instead? Book a time with me on <a href="https://cal.com" target="_blank" rel="noopener">cal.com</a>
+  </p>
+</section>
+
+<section class="work-section" id="experience">
+  <p class="section-title">Work experience</p>
+
+  <div class="work-item">
+    <div class="work-header">
+      <span class="work-company">Simpplr</span>
+      <span class="work-date">Dec 22 – current</span>
+    </div>
+    <div class="work-role">Senior Software Engineer</div>
+    <ul>
+      <li>Developed user-facing features that surfaced ML-driven insights (search ranking, content suggestions) on Simpplr's intranet (2M+ users), using React, Redux and Express.</li>
+      <li>Led development of a content moderation micro-frontend for detecting, reporting, and taking action on flagged content reducing manual moderation by 80%.</li>
+      <li>Led Analytics migration to ThoughtSpot from Sisense achieving 50% faster dashboard load times and 98% reduction in embedded bundle size (1.7MB → 30KB).</li>
+      <li>Transitioned to full-stack development by owning and delivering REST APIs using Node.js, Express, and PostgreSQL for features like user sentiment analysis and content recommendations.</li>
+      <li>Received the Brilliant Beginner award during onboarding (awarded to top new joiners based on ramp-up speed and early contributions).</li>
+    </ul>
+  </div>
+
+  <div class="work-item">
+    <div class="work-header">
+      <span class="work-company">Unacademy</span>
+      <span class="work-date">Jun 21 – Apr 23</span>
+    </div>
+    <div class="work-role">Software Engineer, Frontend</div>
+    <ul>
+      <li>Built interactive classroom experiences in the video player micro-frontend team (10M+ monthly viewers) using React, Redux, and vanilla JS.</li>
+      <li>Delivered real-time engagement features like RaiseAHand and Q&A using WebSockets, increasing average watch time by 8%.</li>
+      <li>Revamped class chat experience with user profiles, and added notebook & polling tools which led to 26% boost in learner engagement.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-links">
+      <a href="https://twitter.com/rajatetc" target="_blank" rel="noopener">𝕏</a>
+      <a href="https://github.com/rajatetc" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/rajatetc" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:rajatgupta1798@gmail.com">Email</a>
+    </div>
+    <div class="footer-rss">
+      <a href="https://guptarajat.hashnode.dev/rss.xml" target="_blank" rel="noopener">RSS</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Based in Delhi, India 🇮🇳</span>
+    <span id="clock"></span>
+  </div>
+</footer>
+
+<script>
+  // Theme toggle
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    localStorage.setItem('theme', current === 'dark' ? 'light' : 'dark');
+  }
+  (function() {
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  })();
+
+  // Live clock (IST)
+  function updateClock() {
+    const now = new Date().toLocaleTimeString('en-IN', {
+      hour: '2-digit', minute: '2-digit', second: '2-digit',
+      hour12: false, timeZone: 'Asia/Kolkata'
+    });
+    document.getElementById('clock').textContent = now;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
