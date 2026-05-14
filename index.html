@@ -321,9 +321,9 @@
 <nav>
   <a href="/" class="nav-name">Rajat Gupta</a>
   <div class="nav-right">
-    <a href="#projects">projects</a>
-    <span class="sep">/</span>
     <a href="#experience">experience</a>
+    <span class="sep">/</span>
+    <a href="#projects">projects</a>
     <span class="sep">/</span>
     <a href="https://guptarajat.hashnode.dev/" target="_blank" rel="noopener">tech blog</a>
     <span class="sep">/</span>
@@ -379,28 +379,6 @@
   </div>
 </section>
 
-<section class="projects-section" id="projects">
-  <p class="section-title">Projects</p>
-
-  <div class="work-item">
-    <div class="work-header">
-      <span class="work-company">RepoGrok</span>
-      <span class="work-date">2026</span>
-    </div>
-    <div class="work-role">AI-powered codebase explainer</div>
-    <ul>
-      <li>Paste any GitHub repo and get an interactive overview — file/LOC breakdown, dependencies, folder tree, and live pulse (stars, forks, contributors).</li>
-      <li>Built a RAG chat over the codebase using Babel AST parsing, Cloudflare Workers AI embeddings (bge-small-en-v1.5), and Gemini 2.5 Flash for multi-turn Q&A.</li>
-      <li>TypeScript end-to-end — React + Vite frontend, Node + Express backend, deployed on Vercel.</li>
-    </ul>
-    <div class="project-links">
-      <a href="https://repo-grok.vercel.app" target="_blank" rel="noopener">Live demo</a>
-      <span class="sep">·</span>
-      <a href="https://github.com/rajatetc/repo-grok" target="_blank" rel="noopener">Source</a>
-    </div>
-  </div>
-</section>
-
 <section class="work-section" id="experience">
   <p class="section-title">Work experience</p>
 
@@ -412,13 +390,9 @@
     <div class="work-role">Senior Software Engineer · May 25 – present</div>
     <div class="work-role-secondary">Software Engineer, Frontend · May 23 – Apr 25</div>
     <ul>
-      <li>Built a content moderation micro-frontend (flag, review, act) — a top-requested enterprise feature that became a key differentiator in sales demos, supporting $500K+ in deal pipeline.</li>
-      <li>Drove end-to-end Analytics platform migration from Sisense to ThoughtSpot — evaluated 3 vendors, built POC, designed HLD, and executed a 6-month phased rollout across 21 dashboards using feature flags, achieving 50% faster load times and 98% bundle size reduction (1.7MB → 30KB).</li>
-      <li>Defined migration architecture and built reusable hooks and components that became the template for other engineers, enabling the team to scale migrations independently.</li>
-      <li>Established frontend technical standards across 7+ repositories — leading architecture decisions, conducting regular code reviews, and mentoring 4 engineers, improving TypeScript coverage to 85% with A-rated SonarQube quality.</li>
-      <li>Built an AI-powered content recommendation engine using LLM APIs, serving personalized suggestions to 100K+ enterprise users.</li>
-      <li>Transitioned to full-stack development by owning and delivering REST APIs using Node.js, Express, and PostgreSQL for features like user sentiment analysis and custom themes.</li>
-      <li>Received Brilliant Beginner and Bugathon Champion awards for rapid ramp-up and bug resolution speed.</li>
+      <li>Led the analytics platform migration from Sisense to ThoughtSpot across 21 dashboards. Evaluated vendors, built a proof of concept, and rolled it out in phases behind feature flags.</li>
+      <li>Built a content moderation micro-frontend (flag, review, act) that became a recurring fixture in sales demos.</li>
+      <li>Built an AI content recommendation engine on top of LLM APIs for personalized in-product suggestions.</li>
     </ul>
   </div>
 
@@ -429,11 +403,31 @@
     </div>
     <div class="work-role">Software Engineer, Frontend</div>
     <ul>
-      <li>Built interactive classroom experiences in the video player micro-frontend team (10M+ monthly viewers) using React, Redux, and vanilla JS.</li>
-      <li>Delivered real-time engagement features like RaiseAHand and Q&A using WebSockets, increasing average watch time by 8%.</li>
-      <li>Revamped class chat experience with user profiles, notebook & polling tools, leading to a 26% boost in learner engagement.</li>
-      <li>Built a Video Library CMS in collaboration with cross-functional teams, replacing an external vendor and serving ~50 educators.</li>
+      <li>Worked on the video player team building live classroom features. Shipped real-time engagement tools like RaiseAHand, Q&A, and polls over WebSockets.</li>
+      <li>Revamped the class chat with user profiles, notebooks, and polling tools.</li>
     </ul>
+  </div>
+</section>
+
+<section class="projects-section" id="projects">
+  <p class="section-title">Projects</p>
+
+  <div class="work-item">
+    <div class="work-header">
+      <span class="work-company">RepoGrok</span>
+      <span class="work-date">2026</span>
+    </div>
+    <div class="work-role">AI-powered codebase explainer</div>
+    <ul>
+      <li>Paste any GitHub repo to get an interactive overview with file/LOC breakdown, dependencies, folder tree, and live GitHub pulse (stars, forks, contributors).</li>
+      <li>Added a multi-turn RAG chat over the codebase using Babel AST parsing, Cloudflare Workers AI embeddings (bge-small-en-v1.5), and Gemini 2.5 Flash.</li>
+      <li>TypeScript end-to-end. React + Vite frontend on Vercel, Node + Express backend on Render.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://repo-grok.vercel.app" target="_blank" rel="noopener">Live demo</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/rajatetc/repo-grok" target="_blank" rel="noopener">Source</a>
+    </div>
   </div>
 </section>
 
