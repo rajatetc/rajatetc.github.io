@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Ctext x='50' y='72' font-size='64' font-family='Inter,sans-serif' font-weight='600' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <title>Rajat Gupta</title>
-<meta name="description" content="Frontend engineer with 5+ years of experience building scalable web applications used by millions.">
+<meta name="description" content="Frontend engineer with 5+ years of experience in React and TypeScript, primarily in SaaS. Doing more full-stack work and bringing AI features into the products I work on.">
 <meta property="og:title" content="Rajat Gupta">
-<meta property="og:description" content="Frontend engineer with 5+ years of experience building scalable web applications used by millions.">
+<meta property="og:description" content="Frontend engineer with 5+ years of experience in React and TypeScript, primarily in SaaS. Doing more full-stack work and bringing AI features into the products I work on.">
 <meta property="og:image" content="https://rajatgupta.site/og.png">
 <meta property="og:url" content="https://rajatgupta.site">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rajat Gupta">
-<meta name="twitter:description" content="Frontend engineer with 5+ years of experience.">
+<meta name="twitter:description" content="Frontend engineer with 5+ years of experience in React and TypeScript. Doing more full-stack work and shipping AI features in SaaS.">
 <meta name="twitter:image" content="https://rajatgupta.site/og.png">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&display=swap');
@@ -111,6 +112,9 @@
     align-items: center;
   }
   .theme-btn:hover { color: var(--text); }
+  .theme-btn .icon-sun { display: none; }
+  html[data-theme="dark"] .theme-btn .icon-sun { display: block; }
+  html[data-theme="dark"] .theme-btn .icon-moon { display: none; }
 
   /* ── Intro ── */
   .intro {
@@ -167,6 +171,33 @@
     background: var(--accent);
     border-color: var(--accent);
     color: #fff;
+  }
+
+  /* ── Projects ── */
+  .projects-section {
+    margin-bottom: 4rem;
+  }
+  .project-links {
+    margin-top: 0.8rem;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .project-links a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .project-links a:hover {
+    color: var(--text);
+    border-color: var(--text);
+  }
+  .project-links .sep {
+    color: var(--muted);
+    opacity: 0.6;
   }
 
   /* ── Work Experience ── */
@@ -288,17 +319,28 @@
 <nav>
   <a href="/" class="nav-name">Rajat Gupta</a>
   <div class="nav-right">
-    <a href="#experience">about</a>
+    <a href="#projects">projects</a>
+    <span class="sep">/</span>
+    <a href="#experience">experience</a>
     <span class="sep">/</span>
     <a href="https://guptarajat.hashnode.dev/" target="_blank" rel="noopener">tech blog</a>
     <span class="sep">/</span>
     <a href="https://flowcv.com/resume/hd9nuajcc0bb" target="_blank" rel="noopener">resume</a>
     <span style="margin-left:0.25rem;color:var(--muted);">·</span>
     <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
-      <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-        <line x1="8" y1="21" x2="16" y2="21"></line>
-        <line x1="12" y1="17" x2="12" y2="21"></line>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <line x1="12" y1="2" x2="12" y2="4"></line>
+        <line x1="12" y1="20" x2="12" y2="22"></line>
+        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+        <line x1="2" y1="12" x2="4" y2="12"></line>
+        <line x1="20" y1="12" x2="22" y2="12"></line>
+        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+        <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
       </svg>
     </button>
   </div>
@@ -306,7 +348,7 @@
 
 <section class="intro">
   <p>
-    Frontend engineer with 5+ years of experience building scalable, high-performance web applications used by millions. I specialise in React and TypeScript to drive product engagement in SaaS environments, turning complex data and AI-driven insights into intuitive experiences that feel simple for the end-user.
+    Frontend engineer with 5+ years of experience in React and TypeScript, primarily in SaaS environments. Recently I've been doing more full-stack work and bringing AI features into the products I work on.
   </p>
   <p>
     Apart from work, I like to play volleyball, read manga, and travel. Sometimes I <a href="https://rajatgupta.xyz/" target="_blank" rel="noopener">write</a> about life and things I find interesting.
@@ -332,6 +374,28 @@
     <span class="skill-tag">CSS</span>
     <span class="skill-tag">WebSockets</span>
     <span class="skill-tag">Micro-frontends</span>
+  </div>
+</section>
+
+<section class="projects-section" id="projects">
+  <p class="section-title">Projects</p>
+
+  <div class="work-item">
+    <div class="work-header">
+      <span class="work-company">RepoGrok</span>
+      <span class="work-date">2026</span>
+    </div>
+    <div class="work-role">AI-powered codebase explainer</div>
+    <ul>
+      <li>Paste any GitHub repo and get an interactive overview — file/LOC breakdown, dependencies, folder tree, and live pulse (stars, forks, contributors).</li>
+      <li>Built a RAG chat over the codebase using Babel AST parsing, Cloudflare Workers AI embeddings (bge-small-en-v1.5), and Gemini 2.5 Flash for multi-turn Q&A.</li>
+      <li>TypeScript end-to-end — React + Vite frontend, Node + Express backend, deployed on Vercel.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://repo-grok.vercel.app" target="_blank" rel="noopener">Live demo</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/rajatetc/repo-grok" target="_blank" rel="noopener">Source</a>
+    </div>
   </div>
 </section>
 
@@ -398,7 +462,11 @@
   }
   (function() {
     const saved = localStorage.getItem('theme');
-    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    if (saved) {
+      document.documentElement.setAttribute('data-theme', saved);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
   })();
 </script>
 
