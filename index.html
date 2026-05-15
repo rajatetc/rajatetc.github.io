@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://rajatgupta.site/">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Ctext x='50' y='72' font-size='64' font-family='Inter,sans-serif' font-weight='600' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <title>Rajat Gupta</title>
 <meta name="description" content="Frontend engineer with 5+ years of experience in React and TypeScript, primarily in SaaS. Doing more full-stack work and bringing AI features into the products I work on.">
@@ -15,6 +19,22 @@
 <meta name="twitter:title" content="Rajat Gupta">
 <meta name="twitter:description" content="Frontend engineer with 5+ years of experience in React and TypeScript. Doing more full-stack work and shipping AI features in SaaS.">
 <meta name="twitter:image" content="https://rajatgupta.site/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rajat Gupta",
+  "url": "https://rajatgupta.site/",
+  "jobTitle": "Frontend Engineer",
+  "email": "mailto:rajatgupta1798@gmail.com",
+  "sameAs": [
+    "https://github.com/rajatetc",
+    "https://linkedin.com/in/rajatetc",
+    "https://x.com/rajatetc",
+    "https://rajatgupta.xyz/"
+  ]
+}
+</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&display=swap');
 
@@ -46,7 +66,9 @@
 
   html {
     font-size: 18px;
-    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
   }
 
   body {
@@ -162,7 +184,7 @@
   .skill-tag {
     font-size: 0.78rem;
     padding: 0.3rem 0.7rem;
-    border-radius: 3px;
+    border-radius: 2px;
     background: var(--skill-bg);
     border: 1px solid var(--skill-border);
     color: var(--text);
@@ -465,7 +487,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>From India 🇮🇳</span>
+    <span>Currently in India</span>
   </div>
 </footer>
 
