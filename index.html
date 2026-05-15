@@ -312,10 +312,26 @@
     html { font-size: 16px; }
     body { padding: 2rem 1.25rem 1.5rem; }
     nav {
+      position: relative;
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.6rem;
+      gap: 1rem;
       margin-bottom: 3rem;
+    }
+    .nav-right {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .nav-right .sep,
+    .nav-right > span[style] { display: none; }
+    .theme-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-left: 0;
+      padding: 0;
     }
     .work-header { flex-direction: column; gap: 0.15rem; }
   }
